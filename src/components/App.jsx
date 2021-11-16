@@ -65,12 +65,12 @@ export const App = () => {
           </form>
           <article>
             <h2>the coloring book app</h2>
-            <p>Turn on some music, sit back, and relax with Tesselate.</p>
+            <p>Turn on some music, sit back, and relax with Tessellate.</p>
             <p>To get started, choose a piece of art from the menu above.</p>
           </article>
         </div>
       )}
-      <footer>&copy; Tesselate</footer>
+      <footer>&copy; Tessellate</footer>
     </div>
   );
 };
