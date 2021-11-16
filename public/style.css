@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(17, 17, 17);
+  color: rgb(204, 204, 204);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 1050px;
+  margin: 0px auto;
+  padding: 25px;
+  background-color: rgb(34, 34, 34);
+  border: 5px double rgb(17, 17, 17);
+}
+
+#logo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+#logo img {
+  height: 3rem;
+  margin-right: 15px;
+}
+
+h1 {
+  color: rgb(204, 204, 204);
+  font-family: "M PLUS Code Latin", sans-serif;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+h2 {
+  color: rgb(204, 204, 204);
+  font-family: "M PLUS Code Latin", sans-serif;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+}
+
+#menu {
+  height: 100%;
+  width: 100%;
+}
+
+#menu form {
+  padding: 25px 0px;
+}
+
+#menu select {
+  min-width: 150px;
+}
+
+#menu select,
+#menu input {
+  height: 50px;
+  padding: 10px;
+  margin-right: 20px;
+  color: inherit;
+  background-color: rgb(34, 34, 34);
+  border: 2px solid rgb(136, 136, 136);
+}
+
+#menu select:hover {
+  cursor: pointer;
+  background-color: rgb(17, 17, 17);
+  color: rgb(236, 236, 236);
+}
+
+#menu input:hover {
+  cursor: pointer;
+  background-color: rgb(236, 236, 236);
+  color: rgb(17, 17, 17);
+}
+
+#menu p {
+  padding-top: 10px;
+}
+
+#workspace {
+  align-self: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr;
+  grid-template-rows: 1fr 10fr;
+  width: 100%;
+}
+
+#workspace h2 {
+  grid-column: 3 / 4;
+  justify-self: center;
+  font-size: 3rem;
+}
+
+#toolbar {
+  grid-column: 1 / 2;
+  height: 40rem;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+#toolbar div {
+  padding: 20px 10px;
+  text-align: center;
+  background-color: rgb(34, 34, 34);
+  border: 2px solid rgb(136, 136, 136);
+}
+
+#toolbar div:hover {
+  cursor: pointer;
+  background-color: rgb(17, 17, 17);
+  color: rgb(236, 236, 236);
+}
+
+#eraser {
+  grid-column: 1 / 3;
+}
+
+#palette {
+  height: 40rem;
+  justify-self: center;
+  display: grid;
+  row-gap: 5px;
+  align-items: center;
+}
+
+#palette button {
+  width: 6rem;
+  height: 3.5rem;
+  border-color: rgb(34, 34, 34);
+  border-radius: 1.5rem;
+  box-shadow: inset -1px -3px 5px rgb(34, 34, 34);
+}
+
+.active {
+  width: 300px;
+}
+
+#grid {
+  height: 40rem;
+  width: 40rem;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border: 2px solid rgb(136, 136, 136);
+}
+
+.grid-cell {
+  border: 1px dotted rgb(136, 136, 136);
+}
+
+.grid-cell:hover {
+  cursor: pointer;
+}
+
+.primary-cell {
+  background-color: rgb(180, 180, 180);
+  box-shadow: inset 0px 0px 0px 1px rgb(236, 236, 236);
+}
+
+.secondary-cell {
+  background-color: rgb(99, 99, 99);
+}
+/* 
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 4pt;
+  }
+} */
