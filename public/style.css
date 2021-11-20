@@ -159,6 +159,12 @@ footer {
 
 .grid-cell {
   border: 1px dotted rgb(136, 136, 136);
+  border-radius: 3px;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .grid-cell:hover {

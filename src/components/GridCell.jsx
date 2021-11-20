@@ -13,7 +13,8 @@ export const GridCell = ({
   setGridMem,
   //
 }) => {
-  const [color, setColor] = useState("transparent");
+  const [active, setActive] = useState(false);
+  const [color, setColor] = useState("");
 
   const handleStartPaint = (e) => {
     if (e.target.style.backgroundColor == brush) return;
@@ -21,8 +22,9 @@ export const GridCell = ({
     setGridMem([...gridMem, e.target.attributes.data.value]);
     //
     if (eraser) {
-      setColor("");
+      setActive(false);
     } else {
+      setActive(true);
       setColor(brush);
     }
     setIsPainting(true);
@@ -31,8 +33,9 @@ export const GridCell = ({
   const handleKeepPainting = (e) => {
     if (!isPainting || e.target.style.backgroundColor == brush) return;
     if (eraser) {
-      setColor("");
+      setActive(false);
     } else {
+      setActive(true);
       setColor(brush);
     }
   };
@@ -47,7 +50,7 @@ export const GridCell = ({
       className={`grid-cell${
         primaryCell ? " primary-cell" : secondaryCell ? " secondary-cell" : ""
       }`}
-      style={color !== "transparent" ? { backgroundColor: color } : null}
+      style={active ? { backgroundColor: color } : null}
       onMouseDown={handleStartPaint}
       onMouseOver={handleKeepPainting}
       onMouseUp={handleEndPaint}
