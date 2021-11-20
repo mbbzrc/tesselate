@@ -4,12 +4,15 @@ import { Toolbar, Palette, Grid } from "./index";
 
 import { templates } from "../templates";
 
+import { generatePalette } from "../palettes";
+
 export const App = () => {
   const [canvas, setCanvas] = useState(false);
   const [template, setTemplate] = useState({
-    size: 144,
-    style: { gridTemplateColumns: "repeat(12, 1fr)" },
+    size: 900,
+    style: { gridTemplateColumns: "repeat(30, 1fr)" },
   });
+  const [palette, setPalette] = useState(generatePalette());
   const [brush, setBrush] = useState("");
   const [eraser, setEraser] = useState(false);
 
@@ -44,10 +47,11 @@ export const App = () => {
           <h2>{template.displayName}</h2>
           <Toolbar
             setCanvas={setCanvas}
+            setPalette={setPalette}
             eraser={eraser}
             setEraser={setEraser}
           />
-          <Palette setBrush={setBrush} eraser={eraser} />
+          <Palette palette={palette} setBrush={setBrush} eraser={eraser} />
           <Grid template={template} brush={brush} eraser={eraser} />
         </div>
       ) : (

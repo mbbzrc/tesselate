@@ -14,7 +14,7 @@ export const GridCell = ({
   //
 }) => {
   const [active, setActive] = useState(false);
-  const [color, setColor] = useState("");
+  const [color, setColor] = useState("transparent");
 
   const handleStartPaint = (e) => {
     if (e.target.style.backgroundColor == brush) return;
@@ -37,6 +37,9 @@ export const GridCell = ({
     } else {
       setActive(true);
       setColor(brush);
+      //
+      setGridMem([...gridMem, e.target.attributes.data.value]);
+      //
     }
   };
 

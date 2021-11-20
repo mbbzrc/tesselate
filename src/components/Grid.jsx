@@ -6,9 +6,10 @@ export const Grid = ({ template, brush, eraser }) => {
   const [size, setSize] = useState(template.size);
   const [isPainting, setIsPainting] = useState(false);
 
+  //
   const [gridMem, setGridMem] = useState([]);
-
   console.log(gridMem);
+  //
 
   const searchArray = (array, value) => {
     let lower = 0;
